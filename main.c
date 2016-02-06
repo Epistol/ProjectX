@@ -34,7 +34,7 @@ void dialoguesalle(int SalleEnCours, char Etat_Joueur) {
                 Salle[3] = 0;
 
 
-
+//PLOP2
 
                     printf("|-----------| \n");
                     printf("|          /| \n");
