@@ -47,9 +47,15 @@ void dialoguesalle(int SalleEnCours, char Etat_Joueur) {
                     printf("|         \\ | \n");
                     printf("|-----------| \n");
 
+                        if (Salle[0] == 1 && Salle[1] == 0 && Salle[2] == 0 && Salle[3] == 0 ) {
+                             printf("\n Vous ne pouvez qu'avancer \n");
+                        }
 
 
-                        if (Salle[0] == 1) {
+
+
+                        else {
+                              if (Salle[0] == 1) {
                             printf("\n Vous pouvez avancer \n");
 
                         }
@@ -62,6 +68,8 @@ void dialoguesalle(int SalleEnCours, char Etat_Joueur) {
                         if (Salle[3] == 1) {
                             printf("\n Vous pouvez aller a droite \n");
                         }
+                        }
+
 
 
 
