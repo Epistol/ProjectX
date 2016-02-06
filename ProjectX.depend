@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1454701809 source:c:\users\gl552jx\documents\projectx\main.c
+	<stdio.h>
+	<stdlib.h>
+

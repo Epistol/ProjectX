@@ -1,0 +1,31 @@
+
+Si on considère qu'une salle aura 4 possibilité de sortie :
+HAUT - BAS - GAUCHE - DROITE
+SALLE[3] = H,B,G,D (ou {1,1,1,1} pour une salle ouverte aux 4 ouvertures)
+
+Qu'un jour à 4 orientation :
+FACE-ARRIERE-GAUCHE-DROITE
+JOUEUR = F,A,G ou D
+
+On peut determiner les possibilités de sortie du joueur en fonction des possibilité de la salle :
+Salle[3] = {1,0,1,0} en mettant 1 pour possible et 0 pour impossible
+
+En théorisant qu'on regarde la salle vue de dessus comme une carte,
+
+Si le joueur regarde vers la gauche, alors HAUT deviens DROITE, GAUCHE deviens FACE, BAS deviens GAUCHE, et DROITE deviens ARRIERE
+Si joueur regarde vers droite, alors HAUT deviens GAUCHE, GAUCHE deviens ARRIERE, BAS deviens DROITE, et DROITE deviens FACE
+
+
+Donc on doit écrire un bout de texte qui permet au joueur de pivoter sur lui même, ou d'avancer :
+
+"Voulez-vous avancer ?"
+    -> NON
+            "Voulez vous regardez autour de vous ?"
+                    -> "OUI"
+                        -"Face à vous ? (F) à Gauche (G) ? à Droite (D) ? en arrière ? (A)
+                    -> "NON"
+                                "Une heure passe ... et maintenant ?" // mettre un compteur pour l'heure pour entrainer un game over de faim
+"Voulez vous avancer ?"
+etc
+
+qu'une variable salleencours() renverra le contenu de tableau Salle[3] en lui passant la position et dans salleencours() on fait appel à remplirtableau()
